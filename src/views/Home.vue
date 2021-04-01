@@ -2,43 +2,13 @@
   <div class="home">
     <h1>The Movie App</h1>
 
-    <router-link to="/signup">Signup</router-link>
-    <br />
-    <router-link to="/login">Login</router-link>
-    <br />
-    <router-link to="/logout">Logout</router-link>
-
-    <!-- !-- Create Button -->
-    <div>
-      <h2>Create New Movies for the Database</h2>
-      Title:
-      <input type="text" v-model="newMovieTitle" />
-      <br />
-      Year:
-      <input type="text" v-model="newMovieYear" />
-      <br />
-      Plot:
-      <input type="text" v-model="newMoviePlot" />
-      <br />
-      Director:
-      <br />
-      <input type="text" v-model="newMovieDirector" />
-      <br />
-    </div>
-
-    <br />
-    <br />
-    <button v-on:click="createMovie()">Create</button>
-    <br />
-    <br />
-
     <div>
       <div v-for="movie in movies" v-bind:key="movie.id">
         <p>{{ movie.title }}</p>
         <button v-on:click="showMovie(movie)">Click for more info</button>
       </div>
 
-      <!-- Modal  -->
+      Modal
 
       <dialog id="movie-details">
         <form method="dialog">
