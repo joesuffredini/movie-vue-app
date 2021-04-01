@@ -2,6 +2,12 @@
   <div class="home">
     <h1>The Movie App</h1>
 
+    <router-link to="/signup">Signup</router-link>
+    <br />
+    <router-link to="/login">Login</router-link>
+    <br />
+    <router-link to="/logout">Logout</router-link>
+
     <!-- !-- Create Button -->
     <div>
       <h2>Create New Movies for the Database</h2>
@@ -29,12 +35,7 @@
     <div>
       <div v-for="movie in movies" v-bind:key="movie.id">
         <p>{{ movie.title }}</p>
-        <!-- <p>{{ movie.plot }}</p>
-        <p>{{ movie.year }}</p>
-        <p>{{ movie.director }}</p> -->
-        <!-- <br /> -->
         <button v-on:click="showMovie(movie)">Click for more info</button>
-        <!-- <br /> -->
       </div>
 
       <!-- Modal  -->
