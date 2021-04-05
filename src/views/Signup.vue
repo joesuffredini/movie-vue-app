@@ -10,6 +10,7 @@
       <div class="form-group">
         <label>Name:</label>
         <input type="text" class="form-control" v-model="name" />
+        <small v-if="name.length > 15">NAME IS TO LONG!</small>
       </div>
       <div class="form-group">
         <label>Email:</label>

@@ -1,8 +1,12 @@
 <template>
   <div class="home">
-    <h1>The Movie App</h1>
+    <div class="jumbotron jumbotron-fluid">
+      <h1 class="display-5">Welcome to the Movie App</h1>
+      <p class="lead">A cool app of movies and details</p>
+      <hr class="my-1" />
+    </div>
 
-    <div>
+    <!-- <div>
       <div v-for="movie in movies" v-bind:key="movie.id">
         <p>{{ movie.title }}</p>
         <button v-on:click="showMovie(movie)">Click for more info</button>
@@ -36,7 +40,7 @@
           </p>
         </form>
       </dialog>
-    </div>
+    </div> -->
   </div>
 </template>
 

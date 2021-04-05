@@ -1,15 +1,18 @@
 <template>
   <div class="movie">
-    <div>
-      <div v-for="movie in movies" v-bind:key="movie.id">
-        <!-- <p>{{ movie.year }}</p>
-        <p>{{ movie.plot }}</p>
-        <p>{{ movie.director }}</p> -->
-        <router-link v-bind:to="`movie/${movie.id}`">
-          <h3>{{ movie.title }}</h3>
-        </router-link>
+    <div class="row">
+      <div class="col-sm-6" v-for="movie in movies" v-bind:key="movie.id">
+        <div class="card">
+          <div class="card-body">
+            <router-link v-bind:to="`movie/${movie.id}`">
+              <h3>{{ movie.title }}</h3>
+              <p></p>
+            </router-link>
+          </div>
+        </div>
       </div>
     </div>
+    <div></div>
   </div>
 </template>
 

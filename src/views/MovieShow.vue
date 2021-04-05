@@ -2,8 +2,8 @@
   <div class="movies-show">
     <div class="container">
       <h2>{{ movie.title }}</h2>
-      <p>{{ movie.year }}</p>
-      <p>{{ movie.plot }}</p>
+      <h3>{{ movie.year }}</h3>
+      <h3>{{ movie.plot }}</h3>
     </div>
     <router-link v-bind:to="`/movie/${movie.id}/edit`">See more info</router-link>
     <br />
