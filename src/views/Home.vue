@@ -2,7 +2,7 @@
   <div class="home">
     <div class="jumbotron jumbotron-fluid">
       <h1 class="display-5">Welcome to the Movie App</h1>
-      <p class="lead">A cool app of movies and details</p>
+      <p class="lead">A cool app for movie lists and details</p>
       <hr class="my-1" />
     </div>
 

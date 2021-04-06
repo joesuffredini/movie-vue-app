@@ -1,4 +1,6 @@
 <template>
+  <!-- Unclear on filter and sort methods. Will continue to investigate -->
+
   <div class="movie">
     <div class="row">
       <div class="col-sm-6" v-for="movie in movies" v-bind:key="movie.id">
@@ -12,16 +14,18 @@
         </div>
       </div>
     </div>
-    <div></div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import Vue2Filters from "vue2-filters";
+
 export default {
   data: function () {
     return {
       movies: [],
+      titleFilter: "",
     };
   },
   created: function () {
@@ -35,5 +39,6 @@ export default {
       });
     },
   },
+  mixins: [Vue2Filters.mixin],
 };
 </script>

@@ -19,9 +19,13 @@
           |
           <router-link to="/about">About</router-link>
           |
-          <router-link to="/signup">Signup</router-link>
+          <span v-if="!isLoggedIn()">
+            <router-link to="/signup">Sign up</router-link>
+          </span>
           |
-          <router-link to="/login">Login</router-link>
+          <span v-if="!isLoggedIn()">
+            <router-link to="/login">Log in</router-link>
+          </span>
           |
           <router-link to="/logout">Logout</router-link>
           |
@@ -43,4 +47,12 @@ body {
 }
 </style>
 
-<script></script>
+<script>
+export default {
+  methods: {
+    isLoggedIn: function () {
+      return localStorage.getItem("jwt");
+    },
+  },
+};
+</script>
